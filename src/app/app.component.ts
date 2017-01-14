@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PromiseService } from './promise.service' //we import our promise class
 import { ObserveService } from './observe.service';
 
@@ -7,17 +7,14 @@ import { ObserveService } from './observe.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-postsThruPromise:any; //an empty variable decleared, it will hold our posts
-postsThruObservable:any; //
+postsThruPromise:any; //an empty variable declared, it will hold posts obtained from Promise Service
+postsThruObservable:any; //an empty variable declared, it will hold posts obtained from Observe Service
 
 constructor( private promiseService:PromiseService,
  private observeService:ObserveService) {}
 
-ngOnInit(){
-
-}
 
 
  getPostPromise() {
