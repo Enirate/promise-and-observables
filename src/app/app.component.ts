@@ -26,7 +26,9 @@ constructor( private promiseService:PromiseService,
 
 getPostObserve() {
   this.observeService.getPostObserve()
-  .subscribe(response => this.postsThruObservable = response)
+  .subscribe(response => this.postsThruObservable = response, err => console.log(err.message)) //the subscribe operator will help 
+  //fire the http request and manage the final value (after initial value has been routed 
+  //through other operators, if available) or error.
 }
 
 
