@@ -1,16 +1,16 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { WikipediaService } from './wikipedia.service';
+import { ObserveService } from './observe.service';
 
-describe('Service: Wikipedia', () => {
+describe('Service: Observe', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [WikipediaService]
+      providers: [ObserveService]
     });
   });
 
-  it('should ...', inject([WikipediaService], (service: WikipediaService) => {
+  it('should ...', inject([ObserveService], (service: ObserveService) => {
     expect(service).toBeTruthy();
   }));
 });

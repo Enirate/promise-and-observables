@@ -1,7 +1,19 @@
+
+
 <div>
-  <h2>Wikipedia Search</h2>
-  <input #term type="text" (keyup)="search(term.value)">
+  <h2>With Love from Json placeholder via promise</h2>
+  <button (click)="getPostPromise()">Get post</button>
   <ul>
-    <li *ngFor="let item of items" >{{item}}</li>
+    <li *ngFor="let item of postsThruPromise" >{{item.body}}</li>
   </ul>
 </div>
+
+
+<div>
+  <h2>With Love from Json placeholder via observables</h2>
+  <button (click)="getPostObserve()">Get post</button>
+  <ul>
+    <li *ngFor="let item of postsThruObservable" >{{item.body}}</li>
+  </ul>
+</div>
+

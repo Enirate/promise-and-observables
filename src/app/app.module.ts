@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
-import { WikipediaService } from './wikipedia.service';
+import { PromiseService } from './promise.service'; //import service class
+import { ObserveService } from './observe.service';
 
 import { AppComponent } from './app.component';
 
@@ -14,9 +15,11 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    JsonpModule
   ],
-  providers: [WikipediaService],
+  providers: [
+    PromiseService, //we declear our promise as a provider after importation
+    ObserveService
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
